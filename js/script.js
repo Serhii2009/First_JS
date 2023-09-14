@@ -1,8 +1,7 @@
-const productName = 'Ремонтний дроїд';
+let clientCounter = 18;
+const maxClients = 25;
 
-console.log(productName.includes('н')); // true
-console.log(productName.includes('Н')); // false
-console.log(productName.includes('дроїд')); // true
-console.log(productName.includes('Дроїд')); // false
-console.log(productName.includes('Ремонтний')); // true
-console.log(productName.includes('ремонтний')); // false
+while (clientCounter < maxClients) {
+  console.log(clientCounter);
+  clientCounter += 1;
+}
