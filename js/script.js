@@ -1,28 +1,30 @@
-function getDiscount(totalSpent) {
-  const BASE_DISCOUNT = 0;
-  const BRONZE_DISCOUNT = 0.02;
-  const SILVER_DISCOUNT = 0.05;
-  const GOLD_DISCOUNT = 0.1;
-  let discount;
+function getShippingCost(country) {
+  let message;
+  // Change code below this line
 
-  // Змінити код нижче
-  if (totalSpent >= 50000) {
-    discount = 0.1;
-  } else if (totalSpent >= 20000 && totalSpent <= 50000) {
-    discount = 0.05;
-  } else if (totalSpent >= 5000 && totalSpent <= 20000) {
-    discount = 0.02;
-  } else if (totalSpent <= 5000) {
-    discount = 0;
+  switch (
+    country // Change this line
+  ) {
+    case 'China': // Change this line
+      message = 'Shipping to China will cost 100 credits'; // Change this line
+      break;
+
+    case 'Chile': // Change this line
+      message = 'Shipping to Chile will cost 250 credits'; // Change this line
+      break;
+
+    case 'Australia': // Change this line
+      message = 'Shipping to Australia will cost 170 credits'; // Change this line
+      break;
+
+    case 'Jamaica': // Change this line
+      message = 'Shipping to Jamaica will cost 120 credits'; // Change this line
+      break;
+
+    default: // Change this line
+      message = 'Sorry, there is no delivery to your country'; // Change this line
   }
-  // Змінити код вище
-  return discount;
-}
 
-getDiscount(137000);
-getDiscount(46900);
-getDiscount(8250);
-getDiscount(1300);
-getDiscount(5000);
-getDiscount(20000);
-getDiscount(50000);
+  // Change code above this line
+  return message;
+}
