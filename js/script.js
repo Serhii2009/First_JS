@@ -1,21 +1,5 @@
-let message = prompt('Color?');
-let action;
+const string = 'javascript';
 
-if (message) {
-  message = message.toLowerCase();
+for (const character of string) {
+  console.log(character);
 }
-
-switch (message) {
-  case 'red':
-    action = 'stop';
-    break;
-  case 'yellow':
-    action = 'ready';
-    break;
-  case 'green':
-    action = 'go';
-    break;
-  default:
-    action = 'be careful';
-}
-console.log(action);
