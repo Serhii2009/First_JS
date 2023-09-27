@@ -1,5 +1,8 @@
-const string = 'javascript';
+const string = 8;
+let result = 0;
 
-for (const character of string) {
-  console.log(character);
+for (let i = 1; i <= string; i++) {
+  result += i;
 }
+
+console.log(result);
