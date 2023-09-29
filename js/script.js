@@ -9,15 +9,30 @@
 //return total;
 //}
 
-let firstArray = ['Artem', 'Serhii'];
-let secondArray = ['Dima', 'Lorak'];
-let maxLength = 3;
-console.log(makeArray(firstArray, secondArray, maxLength));
+//let firstArray = ['Artem', 'Serhii'];
+//let secondArray = ['Dima', 'Lorak'];
+//let maxLength = 3;
+//console.log(makeArray(firstArray, secondArray, maxLength));
 
-function makeArray(firstArray, secondArray, maxLength) {
-  let newArray = firstArray.concat(secondArray);
-  if (newArray.length > maxLength) {
-    newArray = newArray.slice(0, maxLength);
+//function makeArray(firstArray, secondArray, maxLength) {
+//let newArray = firstArray.concat(secondArray);
+//if (newArray.length > maxLength) {
+//newArray = newArray.slice(0, maxLength);
+//}
+//return newArray;
+//}
+
+let min = 50;
+let max = 99;
+console.log(createArrayOfNumbers(min, max));
+
+function createArrayOfNumbers(min, max) {
+  const numbers = [];
+  // Change code below this line
+  for (let i = min; i <= max; i++) {
+    numbers.push(i);
   }
-  return newArray;
+
+  // Change code above this line
+  return numbers;
 }
