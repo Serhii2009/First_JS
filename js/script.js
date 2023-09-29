@@ -1,8 +1,13 @@
-const string = 8;
-let result = 0;
+let order = [34, 50, 3, 4, 5];
+console.log(calculateTotalPrice(order));
 
-for (let i = 1; i <= string; i++) {
-  result += i;
+function calculateTotalPrice(order) {
+  let total = 0;
+  // Change code below this line
+  for (let i = 0; i < order.length; i++) {
+    total += order[i];
+  }
+
+  // Change code above this line
+  return total;
 }
-
-console.log(result);
