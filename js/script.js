@@ -67,3 +67,42 @@
 // console.log(result);
 
 // ----- Example 6 -------
+
+// function checkFruit(fruit) {
+//   if (fruits.includes(fruit.toLowerCase())) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+// console.log(fruits.includes('ApPle'.toLowerCase()));
+// console.log(fruits.includes('pear'.toLowerCase()));
+// console.log(fruits.includes('lavanda'.toLowerCase()));
+
+// ----- Example 7 -------
+
+function getCommonElements(array1, array2) {
+  // Створюємо новий масив для зберігання спільних елементів
+  let commonElements = [];
+
+  // Перевіряємо кожен елемент з першого масиву
+  for (let i = 0; i < array1.length; i++) {
+    let currentElement = array1[i];
+
+    // Перевіряємо, чи присутній поточний елемент у другому масиві
+    if (array2.includes(currentElement)) {
+      // Якщо так, то додаємо його до нового масиву
+      commonElements.push(currentElement);
+    }
+  }
+
+  // Повертаємо новий масив зі спільними елементами
+  return commonElements;
+}
+
+let array1 = [6, 8, 3];
+let array2 = [0, 8, 5, 3];
+
+console.log(getCommonElements(array1, array2));
