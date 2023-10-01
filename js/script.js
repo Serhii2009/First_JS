@@ -83,26 +83,44 @@
 
 // ----- Example 7 -------
 
-function getCommonElements(array1, array2) {
-  // Створюємо новий масив для зберігання спільних елементів
-  let commonElements = [];
+// function getCommonElements(array1, array2) {
+//   // Створюємо новий масив для зберігання спільних елементів
+//   let commonElements = [];
 
-  // Перевіряємо кожен елемент з першого масиву
-  for (let i = 0; i < array1.length; i++) {
-    let currentElement = array1[i];
+//   // Перевіряємо кожен елемент з першого масиву
+//   for (let i = 0; i < array1.length; i++) {
+//     let currentElement = array1[i];
 
-    // Перевіряємо, чи присутній поточний елемент у другому масиві
-    if (array2.includes(currentElement)) {
-      // Якщо так, то додаємо його до нового масиву
-      commonElements.push(currentElement);
-    }
-  }
+//     // Перевіряємо, чи присутній поточний елемент у другому масиві
+//     if (array2.includes(currentElement)) {
+//       // Якщо так, то додаємо його до нового масиву
+//       commonElements.push(currentElement);
+//     }
+//   }
 
-  // Повертаємо новий масив зі спільними елементами
-  return commonElements;
-}
+//   // Повертаємо новий масив зі спільними елементами
+//   return commonElements;
+// }
 
-let array1 = [6, 8, 3];
-let array2 = [0, 8, 5, 3];
+// let array1 = [6, 8, 3];
+// let array2 = [0, 8, 5, 3];
 
-console.log(getCommonElements(array1, array2));
+// console.log(getCommonElements(array1, array2));
+
+// ----- Example 8 -------
+
+// function filterArray(numbers, value) {
+//   // Change code below this line
+//   const filteredNumbers = [];
+
+//   for (const number of numbers) {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+
+//   return filteredNumbers;
+//   // Change code above this line
+// }
+
+// ----- Example 9 -------
