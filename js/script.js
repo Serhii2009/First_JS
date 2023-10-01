@@ -124,3 +124,17 @@
 // }
 
 // ----- Example 9 -------
+
+const words = ['apple', 'banana', 'cherry', 'date'];
+const searchString = 'banana';
+
+function includesWord(array, value) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(includesWord(words, searchString)); // Виведе true, оскільки рядок "banana" є у масиві.
