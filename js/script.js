@@ -466,37 +466,101 @@
 // console.log(hexColors);
 // console.log(rgbColors);
 
-// ----- Example 28 -------
+// ----- Example 28 ------- ВАЖЛИВО!!!
 
-const forecast = {
-  today: {
-    low: 28,
-    high: 32,
-    icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
-  },
-  tomorrow: {
-    low: 27,
-    high: 31,
-  },
-};
-// Change code below this line
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// // Change code below this line
 
-const {
-  today: {
-    high: highToday,
-    low: lowToday,
-    icon: todayIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
-  },
-  tomorrow: {
-    high: highTomorrow,
-    low: lowTomorrow,
-    icon: tomorrowIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
-  },
-} = forecast;
+// const {
+//   today: {
+//     high: highToday,
+//     low: lowToday,
+//     icon: todayIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+//   },
+//   tomorrow: {
+//     high: highTomorrow,
+//     low: lowTomorrow,
+//     icon: tomorrowIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+//   },
+// } = forecast;
 
-console.log(highToday);
-console.log(lowToday);
-console.log(todayIcon);
-console.log(highTomorrow);
-console.log(lowTomorrow);
-console.log(tomorrowIcon);
+// console.log(highToday);
+// console.log(lowToday);
+// console.log(todayIcon);
+// console.log(highTomorrow);
+// console.log(lowTomorrow);
+// console.log(tomorrowIcon);
+
+// ----- Example 29 ------- ВАЖЛИВО!!!
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [
+//   ...firstGroupScores,
+//   ...secondGroupScores,
+//   ...thirdGroupScores,
+// ];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// console.log(allScores);
+// console.log(bestScore);
+// console.log(worstScore);
+
+// ----- Example 30 -------
+
+// const defaultSettings = {
+//   theme: 'light',
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
+
+// console.log(finalSettings);
+
+// ----- Example 31 -------
+
+function makeTask(data) {
+  const { text, category = 'General', priority = 'Normal' } = data;
+
+  const task = {
+    text,
+    category,
+    priority,
+    completed: false,
+  };
+
+  return task;
+}
+
+console.log(makeTask({}));
+console.log(
+  makeTask({
+    category: 'Homemade',
+    priority: 'Low',
+    text: 'Take out the trash',
+  })
+);
+console.log(makeTask({ category: 'Finance', text: 'Take interest' }));
+console.log(makeTask({ priority: 'Low', text: 'Choose shampoo' }));
+console.log(makeTask({ text: 'Buy bread' }));
