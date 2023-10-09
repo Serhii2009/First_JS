@@ -540,27 +540,27 @@
 
 // ----- Example 31 -------
 
-function makeTask(data) {
-  const { text, category = 'General', priority = 'Normal' } = data;
+// function makeTask(data) {
+//   const { text, category = 'General', priority = 'Normal' } = data;
 
-  const task = {
-    text,
-    category,
-    priority,
-    completed: false,
-  };
+//   const task = {
+//     text,
+//     category,
+//     priority,
+//     completed: false,
+//   };
 
-  return task;
-}
+//   return task;
+// }
 
-console.log(makeTask({}));
-console.log(
-  makeTask({
-    category: 'Homemade',
-    priority: 'Low',
-    text: 'Take out the trash',
-  })
-);
-console.log(makeTask({ category: 'Finance', text: 'Take interest' }));
-console.log(makeTask({ priority: 'Low', text: 'Choose shampoo' }));
-console.log(makeTask({ text: 'Buy bread' }));
+// console.log(makeTask({}));
+// console.log(
+//   makeTask({
+//     category: 'Homemade',
+//     priority: 'Low',
+//     text: 'Take out the trash',
+//   })
+// );
+// console.log(makeTask({ category: 'Finance', text: 'Take interest' }));
+// console.log(makeTask({ priority: 'Low', text: 'Choose shampoo' }));
+// console.log(makeTask({ text: 'Buy bread' }));
