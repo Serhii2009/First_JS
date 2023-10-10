@@ -628,3 +628,58 @@
 // console.log(atTheOldToad.potions); // Виведе []
 
 // ----- Example 36 -------
+
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   updatePotionName(oldName, newName) {
+//     const indexToUpdate = this.potions.indexOf(oldName); // Знаходимо індекс зілля за старою назвою
+//     if (indexToUpdate !== -1) {
+//       this.potions[indexToUpdate] = newName; // Оновлюємо назву за індексом
+//     }
+//   },
+// };
+
+// ----- Example 37 ------- Важливо!!!!!!
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+
+//   getPotions() {
+//     return this.potions;
+//   },
+
+//   addPotion(newPotion) {
+//     const potionNames = this.potions.map(potion => potion.name);
+//     if (potionNames.includes(newPotion.name)) {
+//       return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     }
+
+//     this.potions.push(newPotion);
+//   },
+
+//   removePotion(potionName) {
+//     const indexToRemove = this.potions.findIndex(
+//       potion => potion.name === potionName
+//     );
+
+//     if (indexToRemove === -1) {
+//       return `Potion ${potionName} is not in inventory!`;
+//     }
+
+//     this.potions.splice(indexToRemove, 1);
+//   },
+
+//   updatePotionName(oldName, newName) {
+//     const potionToUpdate = this.potions.find(potion => potion.name === oldName);
+
+//     if (!potionToUpdate) {
+//       return `Potion ${oldName} is not in inventory!`;
+//     }
+
+//     potionToUpdate.name = newName;
+//   },
+// };
