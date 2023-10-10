@@ -683,3 +683,96 @@
 //     potionToUpdate.name = newName;
 //   },
 // };
+
+// -
+// -
+// -
+// -
+// -
+// ❤️МОДУЛЬ 4❤️
+// -
+// -
+// -
+// -
+// -
+
+// ----- Example 38 -------
+
+// function processCall(recipient, onAvailable, onNotAvailable) {
+//   // Імітуємо доступність абонента випадковим числом
+//   const isRecipientAvailable = Math.random() > 0.5;
+
+//   if (!isRecipientAvailable) {
+//     onNotAvailable(recipient);
+//     return;
+//   }
+
+//   onAvailable(recipient);
+// }
+
+// function takeCall(name) {
+//   console.log(`З'єднуємо з ${name}, очікуйте...`);
+//   // Логіка прийняття дзвінка
+// }
+
+// function activateAnsweringMachine(name) {
+//   console.log(`Абонент ${name} недоступний, залиште повідомлення.`);
+//   // Логіка активації автовідповідача
+// }
+
+// function leaveHoloMessage(name) {
+//   console.log(`Абонент ${name} недоступний, записуємо голограму.`);
+//   // Логіка запису голограми
+// }
+
+// processCall('Манго', takeCall, activateAnsweringMachine);
+// processCall('Полі', takeCall, leaveHoloMessage);
+
+// ----- Example 39 -------
+
+// function printValue(value) {
+//   console.log(value);
+// }
+
+// function prettyPrint(value) {
+//   console.log('Logging value: ', value);
+// }
+
+// function repeat(n, action) {
+//   for (let i = 0; i < n; i += 1) {
+//     action(i);
+//   }
+// }
+
+// // Передаємо printValue як callback-функцію
+// repeat(3, printValue);
+// // 0
+// // 1
+// // 2
+
+// // Передаємо prettyPrint як callback-функцію
+// repeat(3, prettyPrint);
+// // Logging value: 0
+// // Logging value: 1
+// // Logging value: 2
+
+// ----- Example 40 -------
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// // Метод перебирання forEach
+// numbers.forEach(function (number, index) {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// });
+
+// // // Класичний for
+// // for (let i = 0; i < numbers.length; i += 1) {
+// //   console.log(`Індекс ${i}, значення ${numbers[i]}`);
+// // }
+
+// !!!Єдиним випадком, коли варто використовувати цикли for або for...of
+// для перебирання масиву, - це задачі з перериванням виконання циклу.
+// Перервати виконання методу forEach не можна,
+//   він завжди перебирає масив до кінця.!!!
+
+// ----- Example 41 -------
