@@ -776,3 +776,46 @@
 //   він завжди перебирає масив до кінця.!!!
 
 // ----- Example 41 -------
+
+// // До
+// // function classicAdd(a, b, c) {
+// //   return a + b + c;
+// // }
+
+// // Після
+// const arrowAdd = (a, b, c) => a + b + c;
+// console.log(arrowAdd(1, 4, 5));
+
+// ----- Example 42 -------
+
+// const add = (...args) => {
+//   console.log(args);
+// };
+
+// add(1, 2, 3); // [1, 2, 3]
+
+// ----- Example 43 -------
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// // Оголошення функції
+// // numbers.forEach(function (number, index) {
+// //   console.log(`Індекс ${index}, значення ${number}`);
+// // });
+
+// // Анонімна стрілочна функція
+// numbers.forEach((number, index) => {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// });
+
+// ----- Example 44 -------
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// const logMessage = (number, index) => {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// };
+
+// numbers.forEach(logMessage);
+
+// ----- Example 45 -------
