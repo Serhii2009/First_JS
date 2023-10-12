@@ -839,3 +839,114 @@
 // const numbers = [1, 2, 3, 4, 5];
 // const filteredNumbers = numbers.filter(value => value > 3);
 // console.log(filteredNumbers); // [4, 5]
+
+// ----- Example 46 -------
+
+// const pureMultiply = (array, value) => {
+//   const newArray = [];
+
+//   array.forEach(element => {
+//     newArray.push(element * value);
+//   });
+
+//   return newArray;
+// };
+
+// const numbers = [1, 2, 3, 4, 5];
+// const doubledNumbers = pureMultiply(numbers, 2);
+
+// // Мутація вихідних даних не відбулася
+// console.log(numbers); // [1, 2, 3, 4, 5]
+// // Функція повернула новий масив зі зміненими даними
+// console.log(doubledNumbers); // [2, 4, 6, 8, 10]
+
+// ----- Example 47 -------
+
+// -
+// -
+// -
+// -
+// -
+// АВТОПЕРЕВІРКА(4 МОДУЛЬ)
+// -
+// -
+// -
+// -
+// -
+
+// ----- Example * -------
+
+// function makePizza() {
+//   return 'Your pizza is being prepared, please wait.';
+// }
+
+// const result = makePizza();
+// const pointer = makePizza;
+
+// console.log(result);
+// console.log(pointer);
+
+// ----- Example * -------
+
+// function deliverPizza(pizzaName) {
+//   return `Delivering ${pizzaName} pizza.`;
+// }
+
+// function makePizza(pizzaName) {
+//   return `Pizza ${pizzaName} is being prepared, please wait...`;
+// }
+
+// function makeMessage(pizzaName, callback) {
+//   return callback(pizzaName);
+// }
+
+// console.log(makeMessage('Margarit', makePizza));
+// console.log(makeMessage('Peperoni', deliverPizza));
+
+// ----- Example * -------
+
+// function makePizza(pizzaName, callback) {
+//   console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+//   callback(pizzaName);
+// }
+
+// makePizza('Royal Grand', function deliverPizza(pizzaName) {
+//   console.log(`Delivering pizza ${pizzaName}.`);
+// });
+// // Change code below this line
+
+// makePizza('Ultracheese', function eatPizza(pizzaName) {
+//   console.log(`Eating pizza ${pizzaName}.`);
+// });
+
+// ----- Example * -------
+
+// const pizzaPalace = {
+//   pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+//   order(pizzaName, onSuccess, onError) {
+//     if (this.pizzas.includes(pizzaName)) {
+//       return onSuccess(`Your order is accepted. Cooking pizza ${pizzaName}.`);
+//     }
+//     return onError(
+//       `Error! There is no pizza with a name ${pizzaName} in the assortment.`
+//     );
+//   },
+// };
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return pizzaName;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return error;
+// }
+
+// // Method calls with callbacks
+// console.log(pizzaPalace.order('Smoked', makePizza, onOrderError));
+// console.log(pizzaPalace.order('Four meats', makePizza, onOrderError));
+// console.log(pizzaPalace.order('Big Mike', makePizza, onOrderError));
+// console.log(pizzaPalace.order('Vienna', makePizza, onOrderError));
+
+// ----- Example * -------
