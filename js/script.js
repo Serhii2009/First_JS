@@ -910,6 +910,65 @@
 
 // 50 ----- 🤣Метод filter()😊 -------
 
+// const values = [51, -3, 27, 21, -68, 42, -37];
+
+// const positiveValues = values.filter(value => value >= 0);
+// console.log(positiveValues); // [51, 27, 21, 42]
+
+// const negativeValues = values.filter(value => value < 0);
+// console.log(negativeValues); // [-3, -68, -37]
+
+// const bigValues = values.filter(value => value > 1000);
+// console.log(bigValues); // []
+
+// // Оригінальний масив не змінився
+// console.log(values); // [51, -3, 27, 21, -68, 42, -37]
+
+// 51 ----- 🤣Метод filter()😊 -------
+
+// const LOW_SCORE = 50;
+// const HIGH_SCORE = 80;
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: "Х'юстон", score: 64 },
+// ];
+
+// const best = students.filter(student => student.score >= HIGH_SCORE);
+// console.log(best); // Масив об'єктів з іменами Манго і Ківі
+
+// const worst = students.filter(student => student.score < LOW_SCORE);
+// console.log(worst); // Масив з одним об'єктом Аякс
+
+// // В колбек-функції зручно деструктуризувати властивості об'єкта
+// const average = students.filter(
+//   ({ score }) => score >= LOW_SCORE && score < HIGH_SCORE
+// );
+// console.log(average); // Масив об'єктів з іменами Полі і Х'юстон
+
+// 52 ----- 🤩Метод find()😶‍🌫️ -------
+
+// // Метод find() використовується для одного завдання - пошуку елемента за
+// // унікальним значенням властивості.
+// // Наприклад, пошук користувача за поштою,
+// // автомобіля - за серійним номером, книги - за назвою тощо.
+
+// const colorPickerOptions = [
+//   { label: 'red', color: '#F44336' },
+//   { label: 'green', color: '#4CAF50' },
+//   { label: 'blue', color: '#2196F3' },
+//   { label: 'pink', color: '#E91E63' },
+//   { label: 'indigo', color: '#3F51B5' },
+// ];
+
+// console.log(colorPickerOptions.find(option => option.label === 'blue')); // { label: 'blue', color: '#2196F3' }
+// console.log(colorPickerOptions.find(option => option.label === 'pink')); // { label: 'pink', color: '#E91E63' }
+// console.log(colorPickerOptions.find(option => option.label === 'white')); // undefined
+
+// 52 ----- 😏Метод findIndex()🤑 -------
+
 // -
 // -
 // -
@@ -922,7 +981,7 @@
 // -
 // -
 
-// ----- Example * -------
+// ----- Example 1 -------
 
 // function makePizza() {
 //   return 'Your pizza is being prepared, please wait.';
@@ -934,7 +993,7 @@
 // console.log(result);
 // console.log(pointer);
 
-// ----- Example * -------
+// ----- Example 2 -------
 
 // function deliverPizza(pizzaName) {
 //   return `Delivering ${pizzaName} pizza.`;
@@ -951,7 +1010,7 @@
 // console.log(makeMessage('Margarit', makePizza));
 // console.log(makeMessage('Peperoni', deliverPizza));
 
-// ----- Example * -------
+// ----- Example 3 -------
 
 // function makePizza(pizzaName, callback) {
 //   console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
@@ -967,7 +1026,7 @@
 //   console.log(`Eating pizza ${pizzaName}.`);
 // });
 
-// ----- Example * -------
+// ----- Example 4 -------
 
 // const pizzaPalace = {
 //   pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
@@ -997,4 +1056,97 @@
 // console.log(pizzaPalace.order('Big Mike', makePizza, onOrderError));
 // console.log(pizzaPalace.order('Vienna', makePizza, onOrderError));
 
-// ----- Example * -------
+// ----- Example 5 -------
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(function (item) {
+//     totalPrice += item;
+//   });
+
+//   return totalPrice;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4])); // 138
+// console.log(calculateTotalPrice([164, 48, 291])); // 503
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176])); // 1116
+
+// ----- Example 6 -------
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//   // Change code below this line
+
+//   numbers.forEach(function (number) {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   });
+
+//   // Change code above this line
+//   return filteredNumbers;
+// }
+
+// // Виклик функції `filterArray([1, 2, 3, 4, 5], 3)` повертає `[4, 5]
+// // Виклик функції `filterArray([1, 2, 3, 4, 5], 4)` повертає `[5]`
+// // Виклик функції `filterArray([1, 2, 3, 4, 5], 5)` повертає `[]`
+// // Виклик функції `filterArray([12, 24, 8, 41, 76], 38)` повертає `[41, 76]`
+// // Виклик функції `filterArray([12, 24, 8, 41, 76], 20)` повертає `[24, 41, 76]`
+
+// ----- Example 7 -------
+
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+
+//   firstArray.forEach(function (arrays) {
+//     if (secondArray.includes(arrays)) {
+//       commonElements.push(arrays);
+//     }
+//   });
+
+//   return commonElements;
+// }
+
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+
+// ----- Example 8 -------
+
+// const calculateTotalPrice = (quantity, pricePerItem) => {
+//   return quantity * pricePerItem;
+// };
+
+// console.log(calculateTotalPrice(5, 100));
+// console.log(calculateTotalPrice(8, 60));
+// console.log(calculateTotalPrice(3, 400));
+
+// ----- Example 9 -------
+
+// const calculateTotalPrice = (quantity, pricePerItem) => quantity * pricePerItem;
+
+// console.log(calculateTotalPrice(5, 100));
+// console.log(calculateTotalPrice(8, 60));
+// console.log(calculateTotalPrice(3, 400));
+
+// ----- Example 10  -------
+
+// const calculateTotalPrice = orderedItems => {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(item => {
+//     totalPrice += item;
+//   });
+
+//   return totalPrice;
+// };
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+
+// ----- Example 11  -------
