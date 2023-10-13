@@ -1019,6 +1019,178 @@
 
 // 57 ----- 🤯Метод reduce()🥶 -------
 
+// const total = [2, 7, 3, 14, 6].reduce((previousValue, number) => {
+//   return previousValue + number;
+// }, 0);
+
+// console.log(total); // 32
+
+// 58 ----- 🤯Метод reduce()🥶 -------
+
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: "Х'юстон", score: 64 },
+// ];
+
+// // Назва акумулятора може бути довільною, це просто параметр функції
+// const totalScore = students.reduce((total, student) => {
+//   return total + student.score;
+// }, 0);
+
+// console.log((averageScore = totalScore / students.length));
+// // (83 + 59 + 37 + 94 + 64) / 5 = 67.4
+
+// 59 ----- 🤯Метод reduce()🥶 -------
+
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// // Пройдемо по всіх елементах колекції і додамо значення властивості likes
+// // до акумулятора, початкове значення якого вкажемо 0.
+// const likes = tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+
+// console.log(likes); // 32
+
+// // Мабуть, підрахунок лайків - не одиночна операція, тому напишемо функцію
+// // для підрахунку лайків з колекції
+// const countLikes = tweets => {
+//   return tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+// };
+
+// console.log(countLikes(tweets)); // 32
+
+// 60 ----- 🤯Метод reduce()🥶 -------
+
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// const getTags = tweets =>
+//   tweets.reduce((allTags, tweet) => {
+//     allTags.push(...tweet.tags);
+
+//     return allTags;
+//   }, []);
+
+// const tags = getTags(tweets);
+
+// // Винесемо callback-функцію окремо, а в reducе передамо посилання на неї.
+// // Це стандартна практика, якщо callback-функція досить велика.
+
+// // Якщо в об'єкті-акумуляторі acc відсутня своя властивість з ключем tag,
+// // то створюємо її і записуємо їй значення 0.
+// // В іншому випадку збільшуємо значення на 1.
+// const getTagStats = (acc, tag) => {
+//   if (!acc.hasOwnProperty(tag)) {
+//     acc[tag] = 0;
+//   }
+
+//   acc[tag] += 1;
+
+//   return acc;
+// };
+
+// // Початкове значення акумулятора - це порожній об'єкт {}
+// const countTags = tags => tags.reduce(getTagStats, {});
+
+// const tagCount = countTags(tags);
+// console.log(tagCount);
+
+// 61 ----- 🤕Метод sort()🥳 -------
+
+// const scores = [61, 19, 74, 35, 92, 56];
+// scores.sort();
+// console.log(scores); // [19, 35, 56, 61, 74, 92]
+
+// 62 ----- 🤕Метод sort()🥳 -------
+
+// // Масив рядків сортується за алфавітом.
+
+// const students = ['Віка', 'Андрій', 'Олег', 'Юля', 'Борис', 'Катя'];
+// students.sort();
+// console.log(students); // [ 'Андрій', 'Борис', 'Віка', 'Катя', 'Олег', 'Юля' ]
+
+// 63 ----- 🤕Метод sort()🥳 -------
+
+// // Водночас порядковий номер великих літер менший, ніж у малих.
+
+// const letters = ['b', 'B', 'a', 'A', 'c', 'C'];
+// letters.sort();
+// console.log(letters); // ['A', 'B', 'C', 'a', 'b', 'c']
+
+// 64 ----- 🤕Метод sort()🥳 -------
+
+// // Gеред сортуванням роблять повну копію вихідного масиву і сортують вже її.
+
+// const scores = [61, 19, 74, 35, 92, 56];
+// const ascendingScores = [...scores].sort();
+
+// console.log(scores); // [61, 19, 74, 35, 92, 56]
+// console.log(ascendingScores); // [19, 35, 56, 61, 74, 92]
+
+// 65 ----- 🤕Метод sort()🥳 -------
+
+// const scores = [61, 19, 74, 35, 92, 56];
+// const ascendingScores = [...scores].sort((a, b) => a - b);
+// console.log(ascendingScores); // [19, 35, 56, 61, 74, 92]
+
+// 66 ----- 🤕Метод sort()🥳 -------
+
+// const scores = [61, 19, 74, 35, 92, 56];
+// const descendingScores = [...scores].sort((a, b) => b - a);
+// console.log(descendingScores); // [92, 74, 61, 56, 35, 19]
+
+// 67 ----- 🤕Метод sort()🥳 -------
+
+// const students = ['Віка', 'Андрій', 'Олег', 'Юля', 'Борис', 'Катя'];
+
+// const inAlphabetOrder = [...students].sort((a, b) => a.localeCompare(b));
+// console.log(inAlphabetOrder); // ['Андрій', 'Борис', 'Віка', 'Катя', 'Олег', 'Юля']
+
+// const inReversedOrder = [...students].sort((a, b) => b.localeCompare(a));
+// console.log(inReversedOrder); // ['Юля', 'Олег', 'Катя', 'Віка', 'Борис', 'Андрій']
+
+// 68 ----- 🤕Метод sort()🥳 -------
+
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+// ];
+
+// console.log(
+//   (inAscendingScoreOrder = students.sort(
+//     (firstStudent, secondStudent) => firstStudent.score - secondStudent.score
+//   ))
+// );
+
+// console.log(
+//   (inDescendingScoreOrder = students.sort(
+//     (firstStudent, secondStudent) => secondStudent.score - firstStudent.score
+//   ))
+// );
+
+// console.log(
+//   (inAlphabeticalOrder = students.sort((firstStudent, secondStudent) =>
+//     firstStudent.name.localeCompare(secondStudent.name)
+//   ))
+// );
+
+// 69 ----- 🤕Метод sort()🥳 -------
+
 // -
 // -
 // -
