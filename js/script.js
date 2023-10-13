@@ -967,7 +967,57 @@
 // console.log(colorPickerOptions.find(option => option.label === 'pink')); // { label: 'pink', color: '#E91E63' }
 // console.log(colorPickerOptions.find(option => option.label === 'white')); // undefined
 
-// 52 ----- 😏Метод findIndex()🤑 -------
+// 53 ----- 😏Метод findIndex()🤑 -------
+
+// const colorPickerOptions = [
+//   { label: 'red', color: '#F44336' },
+//   { label: 'green', color: '#4CAF50' },
+//   { label: 'blue', color: '#2196F3' },
+//   { label: 'pink', color: '#E91E63' },
+//   { label: 'indigo', color: '#3F51B5' },
+// ];
+
+// console.log(colorPickerOptions.findIndex(option => option.label === 'blue')); // 2
+// console.log(colorPickerOptions.findIndex(option => option.label === 'pink')); // 3
+// console.log(colorPickerOptions.findIndex(option => option.label === 'white')); // -1
+
+// 54 ----- 🤪Методи every() і some()❤️ -------
+
+// // ! УСІ ЕЛЕМЕНТИ ! більші або дорівнюють нулю? - так
+// console.log([1, 2, 3, 4, 5].every(value => value >= 0)); // true
+
+// // ! УСІ ЕЛЕМЕНТИ !  більші або дорівнюють нулю? - ні
+// console.log([1, 2, 3, -10, 4, 5].every(value => value >= 0)); // false
+
+// 55 ----- 🤪Методи every() і some()❤️ -------
+
+// // ! Чи є хоча б один елемент !, що більший або дорівнює нулю? - так
+// console.log([1, 2, 3, 4, 5].some(value => value >= 0)); // true
+
+// // ! Чи є хоча б один елемент !, що більший або дорівнює нулю? - так
+// console.log([-7, -20, 3, -10, -14].some(value => value >= 0)); // true
+
+// // ! Чи є хоча б один елемент !, що менший нуля? - ні
+// console.log([1, 2, 3, 4, 5].some(value => value < 0)); // false
+
+// // ! Чи є хоча б один елемент !, що менший нуля? - так
+// console.log([1, 2, 3, -10, 4, 5].some(value => value < 0)); // true
+
+// 56 ----- 🤪Методи every() і some()❤️ -------
+
+// const fruits = [
+//   { name: 'apples', amount: 100 },
+//   { name: 'bananas', amount: 0 },
+//   { name: 'grapes', amount: 50 },
+// ];
+
+// // every поверне true тільки, якщо усіх фруктів буде більше 0 штук
+// console.log(fruits.every(fruit => fruit.amount > 0)); // false
+
+// // some поверне true, якщо хоча б одного фрукту буде більше 0 штук
+// console.log(fruits.some(fruits => fruits.amount > 0)); // true
+
+// 57 ----- 🤯Метод reduce()🥶 -------
 
 // -
 // -
