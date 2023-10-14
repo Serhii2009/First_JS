@@ -1189,7 +1189,41 @@
 //   ))
 // );
 
-// 69 ----- 🤕Метод sort()🥳 -------
+// 69 ----- 💘Ланцюжки методів❗-------
+
+// const students = [
+//   { name: 'Манго', score: 83, courses: ['математика', 'фізика'] },
+//   { name: 'Полі', score: 59, courses: ['інформатика', 'математика'] },
+//   { name: 'Аякс', score: 37, courses: ['фізика', 'біологія'] },
+//   { name: 'Ківі', score: 94, courses: ['література', 'інформатика'] },
+// ];
+
+// const names = [...students]
+//   .sort((a, b) => a.score - b.score)
+//   .map(student => student.name);
+
+// console.log(names); // ['Аякс', 'Полі', 'Манго', 'Ківі']
+
+// 70 ----- 💘Ланцюжки методів❗-------
+
+// const students = [
+//   { name: 'Манго', score: 83, courses: ['математика', 'фізика'] },
+//   { name: 'Полі', score: 59, courses: ['інформатика', 'математика'] },
+//   { name: 'Аякс', score: 37, courses: ['фізика', 'біологія'] },
+//   { name: 'Ківі', score: 94, courses: ['література', 'інформатика'] },
+// ];
+
+// const uniqueSortedCourses = students
+//   .flatMap(student => student.courses)
+//   .filter((course, index, array) => array.indexOf(course) === index)
+//   .sort((a, b) => a.localeCompare(b));
+
+// console.log(uniqueSortedCourses); // ['біологія', 'інформатика', 'література', 'математика', 'фізика']
+
+// // 1. На вихідному масиві викликаємо flatMap() і робимо розгладжений масив усіх курсів.
+// // 2. До результату методу flatMap() застосовуємо метод filter() для фільтрації унікальних елементів.
+// // 3. На результаті методу filter() викликаємо sort().
+// // 4. Змінній uniqueSortedCourses присвоюється результат роботи методу sort().
 
 // -
 // -
@@ -1372,3 +1406,89 @@
 // console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
 
 // ----- Example 11  -------
+
+// const filterArray = (numbers, value) => {
+//   const filteredNumbers = [];
+
+//   numbers.forEach(number => {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   });
+
+//   return filteredNumbers;
+// };
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 4));
+// console.log(filterArray([1, 2, 3, 4, 5], 5));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
+
+// ----- Example 12  -------
+
+// const getCommonElements = (firstArray, secondArray) => {
+//   const commonElements = [];
+
+//   firstArray.forEach(element => {
+//     if (secondArray.includes(element)) {
+//       commonElements.push(element);
+//     }
+//   });
+
+//   return commonElements;
+// };
+
+// console.log(getCommonElements([1, 2, 3], [2, 4])); // [2]
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19])); // [1, 2]
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])); // [12, 27, 3]
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])); // [12, 27, 3]
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30])); // []
+
+// ----- Example 13  -------
+
+// function changeEven(numbers, value) {
+//   return numbers.map(number => (number % 2 === 0 ? number + value : number));
+// }
+
+// // Приклади використання:
+// console.log(changeEven([1, 2, 3, 4, 5], 10)); // [1, 12, 3, 14, 5]
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10)); // [12, 18, 3, 7, 14, 16]
+// console.log(changeEven([17, 24, 68, 31, 42], 100)); // [17, 124, 168, 31, 142]
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100)); // [144, 13, 81, 192, 136, 154]
+
+// ----- Example 14  -------
+
+// const planets = ['Earth', 'Mars', 'Venus', 'Jupiter'];
+// // Change code below this line
+// const planetsLengths = planets.map(planet => planet.length);
+
+// console.log(planetsLengths); // [5, 4, 5, 7]
+
+// ----- Example 15  -------
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//   { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+// ];
+
+// const titles = books.map(book => book.title);
+
+// console.log(titles);
+
+// ----- Example 16  -------
