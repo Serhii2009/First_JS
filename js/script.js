@@ -2201,4 +2201,71 @@
 // bookShelf.addAuthor('Лі Таніт');
 // console.log(bookShelf.getAuthors()); // ["Бернард Корнуелл", "Роберт Шеклі", "Лі Таніт"]
 
-// 3 ----- Ключове слово ⚜️this⚜️ -------
+// 3 ----- Правила визначення ⚜️this⚜️ -------
+
+// const petya = {
+//   username: 'Petya',
+//   showThis() {
+//     console.log(this);
+//   },
+//   showName() {
+//     console.log(this.username);
+//   },
+// };
+
+// petya.showThis(); // {username: "Petya", showThis: ƒ, showName: ƒ}
+// petya.showName(); // 'Petya'
+
+// 4 ----- Правила визначення ⚜️this⚜️ -------
+
+// const customer = {
+//   firstName: 'Jacob',
+//   lastName: 'Mercer',
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+
+// function makeMessage(callback) {
+//   // callback() - це виклик методу getFullName без об'єкта
+//   console.log(`Обробляємо заявку від ${callback()}.`);
+// }
+
+// makeMessage(customer.getFullName); // Буде помилка у виклику функції
+
+// 5 ----- Правила визначення ⚜️this⚜️ -------
+
+// const showThis = () => {
+//   console.log('this in showThis: ', this);
+// };
+
+// showThis(); // this in showThis: window
+
+// const user = {
+//   username: 'Mango',
+// };
+// user.showContext = showThis;
+
+// user.showContext(); // this in showThis: window
+
+// 6 ----- Правила визначення ⚜️this⚜️ -------
+
+// const hotel = {
+//   username: 'Resort hotel',
+//   showThis() {
+//     const foo = () => {
+//       // Стрілки запам'ятовують контекст під час оголошення
+//       // з батьківської області видимості
+//       console.log('this in foo: ', this);
+//     };
+
+//     foo();
+//     console.log('this in showThis: ', this);
+//   },
+// };
+
+// hotel.showThis();
+// // this in foo: {username: 'Resort hotel', showThis: ƒ}
+// // this in showThis: {username: 'Resort hotel',showThis: ƒ}
+
+// 7 ----- Правила визначення ⚜️this⚜️ -------
