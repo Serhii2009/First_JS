@@ -2737,3 +2737,85 @@
 
 // // // ✅ Стало
 // // makeMessage(customer.getFullName.bind(customer)); // Обробляємо заявку від Jacob Mercer.
+
+// 11 ----- 😍Об'єктно-орієнтоване програмування👻 -------
+
+// const baseSalary = 30000;
+// const overtime = 10;
+// const rate = 20;
+
+// const getWage = (baseSalary, overtime, rate) => {
+//   return baseSalary + overtime * rate;
+// };
+
+// console.log(getWage(baseSalary, overtime, rate));
+
+// 12 ----- 😍Об'єктно-орієнтоване програмування👻 -------
+
+// const employee = {
+//   baseSalary: 30000,
+//   overtime: 10,
+//   rate: 20,
+//   getWage() {
+//     return this.baseSalary + this.overtime * this.rate;
+//   },
+// };
+
+// console.log(employee.getWage());
+
+// 13 ----- 🥶Прототипне наслідування🐯 -------
+
+// const animal = {
+//   legs: 4,
+// };
+// const dog = Object.create(animal);
+// dog.name = 'Манго';
+
+// console.log(dog); // { name: 'Манго', __proto__: animal }
+// console.log(animal.isPrototypeOf(dog)); // true
+// console.log(dog.hasOwnProperty('name')); // true
+// console.log(dog.name); // 'Манго'
+
+// console.log(dog.hasOwnProperty('legs')); // false
+// console.log(dog.legs); // 4
+
+// 14 ----- 🥶Прототипне наслідування🐯 -------
+
+// const animal = { eats: true };
+// const dog = Object.create(animal);
+// dog.barks = true;
+
+// for (const key in dog) {
+//   console.log(key); // barks, eats
+// }
+
+// 15 ----- 🥶Прототипне наслідування🐯 -------
+
+// const animal = {
+//   eats: true,
+// };
+// const dog = Object.create(animal);
+// dog.barks = true;
+
+// for (const key in dog) {
+//   if (!dog.hasOwnProperty(key)) continue;
+
+//   console.log(key); // barks
+// }
+
+// 16 ----- !!!🥶Прототипне наслідування🐯!!! -------
+
+// Метод Object.keys(obj) поверне масив тільки власних ключів об'єкта obj,
+// тому, на практиці використовують саме його, а не for...in.
+
+// const animal = {
+//   eats: true,
+// };
+// const dog = Object.create(animal);
+// dog.barks = true;
+
+// const dogKeys = Object.keys(dog);
+
+// console.log(dogKeys); // ['barks']
+
+// 17 ----- 🎀Класи🎗️ -------
