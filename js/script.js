@@ -2917,3 +2917,29 @@
 // console.log(historyService.getOrdersByEmail('roma@kendel.net'));
 // console.log(historyService.getOrdersByEmail('solomon@topmail.net'));
 // console.log(historyService.getOrdersByEmail('jacob@hotmail.com'));
+
+// ----- Example 4 -------
+
+// const parent = {
+//   name: 'Stacey',
+//   surname: 'Moore',
+//   age: 54,
+//   heritage: 'Irish',
+// };
+
+// const child = Object.create(parent);
+
+// child.name = 'Jason';
+// child.age = 27;
+
+// console.log(parent.hasOwnProperty('surname')); // true
+// console.log(parent.hasOwnProperty('heritage')); // true
+// console.log(child.hasOwnProperty('name')); // true
+// console.log(child.name); // "Jason"
+// console.log(child.hasOwnProperty('age')); // true
+// console.log(child.age); // 27
+// console.log(child.hasOwnProperty('surname')); // false
+// console.log(child.surname); // "Moore"
+// console.log(child.hasOwnProperty('heritage')); // false
+// console.log(child.heritage); // "Irish"
+// console.log(parent.isPrototypeOf(child)); // true
