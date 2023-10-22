@@ -2977,3 +2977,5 @@
 // console.log(ancestor.heritage); // "Irish"
 // console.log(parent.heritage); // "Irish" (успадковано від ancestor)
 // console.log(child.heritage); // "Irish" (успадковано від ancestor)
+
+// ----- Example 6 -------
