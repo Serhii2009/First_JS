@@ -2943,3 +2943,37 @@
 // console.log(child.hasOwnProperty('heritage')); // false
 // console.log(child.heritage); // "Irish"
 // console.log(parent.isPrototypeOf(child)); // true
+
+// ----- Example 5 -------
+
+// const ancestor = {
+//   name: 'Paul',
+//   age: 83,
+//   surname: 'Dawson',
+//   heritage: 'Irish',
+// };
+
+// const parent = Object.create(ancestor);
+// parent.name = 'Stacey';
+// parent.surname = 'Moore';
+// parent.age = 54;
+
+// const child = Object.create(parent);
+// child.name = 'Jason';
+// child.age = 27;
+
+// console.log(ancestor.name); // "Paul"
+// console.log(parent.name); // "Stacey"
+// console.log(child.name); // "Jason"
+
+// console.log(ancestor.age); // 83
+// console.log(parent.age); // 54
+// console.log(child.age); // 27
+
+// console.log(ancestor.surname); // "Dawson"
+// console.log(parent.surname); // "Moore"
+// console.log(child.surname); // "Moore" (успадковано від parent)
+
+// console.log(ancestor.heritage); // "Irish"
+// console.log(parent.heritage); // "Irish" (успадковано від ancestor)
+// console.log(child.heritage); // "Irish" (успадковано від ancestor)
