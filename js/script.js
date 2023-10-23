@@ -2978,4 +2978,70 @@
 // console.log(parent.heritage); // "Irish" (успадковано від ancestor)
 // console.log(child.heritage); // "Irish" (успадковано від ancestor)
 
-// ----- Example 6 -------
+// ----- ⭐Example 7⭐ -------
+
+// class Car {
+//   constructor(brand, model, price) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+// }
+
+// const machine = new Car('Audi', 'Q3', 36000);
+// console.log(machine);
+
+// const machine1 = new Car('BMW', 'X5', 58900);
+// console.log(machine1);
+
+// const machine2 = new Car('Nissan', 'Murano', 31700);
+// console.log(machine2);
+
+// ----- ⭐Example 8⭐ -------
+
+// class Car {
+//   constructor({ brand, model, price }) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+// }
+
+// const machine = new Car({ brand: 'Audi', model: 'Q3', price: 36000 });
+// console.log(machine);
+
+// const machine1 = new Car({ brand: 'BMW', model: 'X5', price: 58900 });
+// console.log(machine1);
+
+// const machine2 = new Car({ brand: 'Nissan', model: 'Murano', price: 31700 });
+// console.log(machine2);
+
+// ----- ⭐Example 9⭐ -------
+
+// class Car {
+//   constructor({ brand, model, price }) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+
+//   getPrice() {
+//     return this.price;
+//   }
+
+//   changePrice(newPrice) {
+//     this.price = newPrice;
+//   }
+// }
+
+// const myCar = new Car({
+//   brand: 'Toyota',
+//   model: 'Camry',
+//   price: 25000,
+// });
+
+// console.log(myCar.getPrice()); // Виведе поточну ціну автомобіля
+// myCar.changePrice(35000); // Змінюємо ціну автомобіля
+// console.log(myCar.getPrice()); // Виведе оновлену ціну автомобіля
+
+// ----- Example 10 -------
