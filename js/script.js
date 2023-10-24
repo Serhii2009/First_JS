@@ -3107,7 +3107,7 @@
 // builder.padBoth('=');
 // console.log(builder.getValue()); // "=^.^="
 
-// ----- ⭐Example 12⭐ -------
+// ----- ❤️⭐Example 12⭐❤️ -------
 
 // class Car {
 //   #brand;
@@ -3139,3 +3139,5 @@
 // // // Спроба отримати приватне поле #brand та спроба змінити приватне поле #brand ззовні класу:
 // // console.log(car3.#brand); // Помилка
 // // car1.#brand = 'Chevrolet'; // Помилка
+
+// ----- ⭐Example 12⭐ -------
