@@ -3074,4 +3074,68 @@
 // storage.removeItem('Prolonger');
 // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
-// ----- Example 11 -------
+// ----- ⭐Example 11⭐ -------
+
+// class StringBuilder {
+//   constructor(initialValue) {
+//     this.value = initialValue;
+//   }
+
+//   getValue() {
+//     return this.value;
+//   }
+
+//   padEnd(str) {
+//     this.value += str;
+//   }
+
+//   padStart(str) {
+//     this.value = str + this.value;
+//   }
+
+//   padBoth(str) {
+//     this.value = str + this.value + str;
+//   }
+// }
+
+// const builder = new StringBuilder('.');
+// console.log(builder.getValue()); // "."
+// builder.padStart('^');
+// console.log(builder.getValue()); // "^."
+// builder.padEnd('^');
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth('=');
+// console.log(builder.getValue()); // "=^.^="
+
+// ----- ⭐Example 12⭐ -------
+
+// class Car {
+//   #brand;
+
+//   constructor({ brand, model, price }) {
+//     this.#brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+
+//   getBrand() {
+//     return this.#brand;
+//   }
+
+//   changeBrand(newBrand) {
+//     this.#brand = newBrand;
+//   }
+// }
+
+// const car1 = new Car({ brand: 'Toyota', model: 'Camry', price: 25000 });
+// console.log(car1.getBrand()); // "Toyota"
+// const car2 = new Car({ brand: 'Honda', model: 'Civic', price: 22000 });
+// console.log(car2.getBrand()); // "Honda"
+// car2.changeBrand('Ford');
+// console.log(car2.getBrand()); // "Ford"
+// const car3 = new Car({ brand: 'Nissan', model: 'Altima', price: 23000 });
+// console.log(car3.getBrand()); // "Nissan"
+
+// // // Спроба отримати приватне поле #brand та спроба змінити приватне поле #brand ззовні класу:
+// // console.log(car3.#brand); // Помилка
+// // car1.#brand = 'Chevrolet'; // Помилка
