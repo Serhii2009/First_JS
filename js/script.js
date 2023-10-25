@@ -3141,3 +3141,128 @@
 // // car1.#brand = 'Chevrolet'; // Помилка
 
 // ----- ⭐Example 12⭐ -------
+
+// class Storage {
+//   #items;
+
+//   constructor(items) {
+//     this.#items = items;
+//   }
+
+//   getItems() {
+//     return this.#items;
+//   }
+
+//   addItem(newItem) {
+//     this.#items.push(newItem);
+//   }
+
+//   removeItem(itemToRemove) {
+//     this.#items = this.#items.filter(item => item !== itemToRemove);
+//   }
+// }
+
+// const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem('Droid');
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem('Prolonger');
+// console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Droid"]
+
+// ----- Example 13 -------
+
+// class StringBuilder {
+//   #value;
+
+//   constructor(initialValue) {
+//     this.#value = initialValue;
+//   }
+
+//   getValue() {
+//     return this.#value;
+//   }
+
+//   padEnd(str) {
+//     this.#value += str;
+//   }
+
+//   padStart(str) {
+//     this.#value = str + this.#value;
+//   }
+
+//   padBoth(str) {
+//     this.padStart(str);
+//     this.padEnd(str);
+//   }
+// }
+
+// // Change code above this line
+// const builder = new StringBuilder('.');
+// console.log(builder.getValue()); // "."
+// builder.padStart('^');
+// console.log(builder.getValue()); // "^."
+// builder.padEnd('^');
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth('=');
+// console.log(builder.getValue()); // "=^.^="
+
+// ----- ❤️⭐Example 14⭐❤️ -------
+
+// class Car {
+//   #brand;
+//   #model;
+//   #price;
+
+//   constructor({ brand, model, price }) {
+//     this.#brand = brand;
+//     this.#model = model;
+//     this.#price = price;
+//   }
+
+//   get brand() {
+//     return this.#brand;
+//   }
+
+//   set brand(newBrand) {
+//     this.#brand = newBrand;
+//   }
+
+//   get model() {
+//     return this.#model;
+//   }
+
+//   set model(newModel) {
+//     this.#model = newModel;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     this.#price = newPrice;
+//   }
+// }
+
+// const myCar = new Car({
+//   brand: 'Toyota',
+//   model: 'Camry',
+//   price: 25000,
+// });
+
+// console.log(myCar.brand); // Виводить "Toyota"
+
+// myCar.brand = 'Honda'; // Змінюємо бренд з "Toyota" на "Honda"
+// console.log(myCar.brand); // Виводить "Honda"
+
+// console.log(myCar.model); // Виводить "Camry"
+
+// myCar.model = 'Accord'; // Змінюємо модель з "Camry" на "Accord"
+// console.log(myCar.model); // Виводить "Accord"
+
+// console.log(myCar.price); // Виводить 25000
+
+// myCar.price = 28000; // Змінюємо ціну з 25000 на 28000
+// console.log(myCar.price); // Виводить 28000
+
+// ----- ⭐Example 15⭐ -------
