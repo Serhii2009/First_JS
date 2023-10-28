@@ -3424,3 +3424,33 @@
 // console.log(mango.blacklistedEmails); // ["poly@mail.com"]
 // console.log(mango.isBlacklisted('mango@mail.com')); // false
 // console.log(mango.isBlacklisted('poly@mail.com')); // true
+
+// -
+// -
+// -
+// -
+// -
+// 🆗КОНСПЕКТ(6 МОДУЛЬ)❇️
+// -
+// -
+// -
+// -
+// -
+
+// ------ ⭐Об'єктна модель документа🎁 -------
+
+// ----- 😍DOM🎀 (Структура HTML документа) -------
+
+// <!DOCTYPE html>
+// <html>
+//   <head>
+//     <title>Document title</title>
+//   </head>
+//   <body>
+//     <h1>Page title</h1>
+//     <ul>
+//       <li><a href="#">Link 1</a></li>
+//       <li><a href="#">Link 2</a></li>
+//     </ul>
+//   </body>
+// </html>
