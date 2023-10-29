@@ -3475,4 +3475,18 @@
 // firstMenuItem.style.color = 'tomato';
 // console.log(firstMenuItem);
 
-// ------ 🤡Властивості та атрибути🐲 -------
+// ------ 🐲Властивості та атрибути🤡 -------
+
+// const textEl = document.querySelector('.article-text');
+// console.log(textEl.textContent); // text inside p.article-text
+
+// const titleEl = document.querySelector('.article-title');
+// titleEl.textContent = 'Welcome to Bahamas!';
+
+// ------ 🤖data-атрибути🦀 ------
+
+// const saveBtn = document.querySelector('button[data-action="save"]');
+// console.log(saveBtn.dataset.action); // "save"
+
+// const closeBtn = document.querySelector('button[data-action="close"]');
+// console.log(closeBtn.dataset.action); // "close"
