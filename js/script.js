@@ -3503,3 +3503,64 @@
 // image.src = 'https://placeimg.com/640/480/nature';
 // image.alt = 'Nature';
 // console.log(image); // <img src="https://placeimg.com/640/480/nature" alt="Nature" />
+
+// ----- Some Exercise 1 -----
+
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     score: 8,
+//     age: 37,
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     score: 10,
+//     age: 34,
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     score: 12,
+//     age: 24,
+//   },
+// ];
+
+// const getUsersWithScore = users => {
+//   return users.filter(user => user.score >= 10);
+// };
+
+// console.log(getUsersWithScore(users));
+
+// ----- Some Exercise 2 -----
+
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     score: 8,
+//     age: 37,
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     score: 10,
+//     age: 34,
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     score: 12,
+//     age: 24,
+//   },
+// ];
+
+// const getUsersWithAge = (users, minAge, maxAge) => {
+//   return users.filter(user => user.age >= minAge && user.age <= maxAge);
+// };
+
+// console.log(getUsersWithAge(users, 15, 25));
+// console.log(getUsersWithAge(users, 15, 50));
+// console.log(getUsersWithAge(users, 15, 30));
+// console.log(getUsersWithAge(users, 15, 37));
